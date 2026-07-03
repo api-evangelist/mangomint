@@ -1,0 +1,95 @@
+aid: mangomint
+name: Mangomint
+review:
+  question: Does Mangomint expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Mangomint has no public API surface of
+    any kind - REST, GraphQL, or WebSocket - to model. Its only documented
+    programmatic mechanism is outbound webhooks, which are HTTP POST callbacks
+    configured manually by Mangomint support, not a server-push transport
+    (WebSocket or SSE) that Mangomint exposes for clients to connect to.
+findings:
+  summary: |
+    Mangomint does not publish a public developer API of any kind - no REST
+    API reference, no GraphQL schema, no WebSocket endpoint, no OpenAPI
+    specification, and no self-service developer portal or API key
+    management screen were found. Mangomint is salon and spa business
+    management software (scheduling, POS, payroll, marketing, memberships,
+    forms). Its only documented programmatic surface is outbound webhooks -
+    Mangomint support manually wires a customer-supplied endpoint URL to fire
+    on appointment booked/updated/canceled, sale completed, and form
+    submitted events. No payload schema, signature/authentication scheme, or
+    retry policy is published. A handful of pre-built integrations (Shopify,
+    Mailchimp, Docovia, Doxy.me, WaiverForever, Gift Up!) can be toggled on
+    from the Mangomint dashboard, but these are vendor-built one-offs, not a
+    public API a third-party developer can register against. No official
+    Zapier app for Mangomint exists (zapier.com/apps/mangomint returns 404);
+    any Zapier connection would have to be built on the same undocumented
+    webhook mechanism. Marketing copy on some third-party review sites
+    ("Mangomint offers an API for custom integrations") was not corroborated
+    by any public reference, docs subdomain, or API console - repeated
+    searches for api.mangomint.com, developer.mangomint.com, and
+    docs.mangomint.com surfaced no such properties.
+  openSource: |
+    Mangomint is closed-source, proprietary SaaS. The public GitHub
+    organization (github.com/mangomint) contains only forks of open-source
+    projects (Twenty CRM, Ninja, swifter, create-react-app, LangChain4j,
+    DocRaptor client) and internal hiring-assessment repos - nothing related
+    to a public API or SDK.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference or OpenAPI document found anywhere on mangomint.com or its help center.
+    - protocol: GraphQL
+      scheme: https
+      documented: false
+      note: No GraphQL endpoint or schema documented.
+    - protocol: Webhook
+      scheme: https
+      documented: true
+      note: >-
+        Outbound-only HTTP callbacks for appointment booked/updated/canceled,
+        sale completed, and form submitted events. Configured by Mangomint
+        chat support against a customer-supplied URL; no self-service
+        management UI, payload schema, or auth scheme is published. Add-on
+        priced at $50/month, available on Standard and Unlimited plans only.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Mangomint's site or help center as of the review date.
+  endpointsModeled: none
+sources:
+  - url: https://www.mangomint.com/integrations/
+    type: Documentation
+    note: Lists pre-built integrations (Shopify, Mailchimp, Docovia) and the paid webhooks add-on; no API docs linked.
+  - url: https://www.mangomint.com/learn/help-articles/integrations/
+    type: Documentation
+    note: Help-center overview of apps and integrations toggled from the Mangomint dashboard.
+  - url: https://www.mangomint.com/learn/webhooks-integration/
+    type: Documentation
+    note: Webhooks integration article - lists supported events and states setup is done via chat support, not self-service.
+  - url: https://www.mangomint.com/learn/managing-your-apps-and-integrations/
+    type: Documentation
+    note: How customers enable/disable individual app integrations from settings.
+  - url: https://www.mangomint.com/pricing/
+    type: Documentation
+    note: Confirms three flat-rate tiers (Essentials/Standard/Unlimited), per-location add-on fees, and webhooks as a paid add-on.
+  - url: https://github.com/mangomint
+    type: SourceCode
+    note: Public GitHub org contains only forks and internal interview repos, no public SDK or API code.
+  - url: https://zapier.com/apps/mangomint/integrations
+    type: Other
+    note: Returns HTTP 404 - no official Zapier app exists for Mangomint.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public API surface (REST, GraphQL, or WebSocket) exists to catalog or
+    model with AsyncAPI. apis.yml documents Mangomint as a stub with an empty
+    apis array and an honest description of the webhook-only, support-mediated
+    integration model.

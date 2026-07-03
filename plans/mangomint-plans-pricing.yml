@@ -1,0 +1,219 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Mangomint
+providerId: mangomint
+created: '2026-07-03'
+modified: '2026-07-03'
+reconciled: false
+tags:
+- Salon Software
+- Spa Software
+- Business Management
+- Plans
+description: >-
+  Mangomint sells three flat-rate monthly subscription tiers (Essentials,
+  Standard, Unlimited) priced by number of service providers, plus a
+  per-additional-location fee on every tier. There is no API pricing because
+  there is no public API; the webhooks add-on ($50/month, Standard &
+  Unlimited only) is the closest thing to a programmatic-access line item.
+  Forms & Charting, Connect (call/text/chat), payroll processing, and
+  marketing credits are additional metered or flat add-ons available across
+  tiers.
+notes: >-
+  Pricing sourced from mangomint.com/pricing/ on the review date; Mangomint
+  does not publish contract terms or enterprise/custom pricing beyond these
+  published tiers. No usage-based API metering exists because there is no
+  public API.
+sources:
+- https://www.mangomint.com/pricing/
+- https://www.mangomint.com/integrations/
+- https://www.mangomint.com/learn/webhooks-integration/
+plans:
+- id: mangomint-essentials
+  name: Essentials
+  type: paid
+  description: >-
+    Entry tier for 2 to 10 service providers. Includes scheduling, POS,
+    payroll, marketing, and memberships. Add-on integrations available.
+  entries:
+  - label: Monthly Subscription
+    name: essentials_monthly
+    type: flat
+    metric: subscription
+    limit: 10
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $165/month (2-10 service providers)
+    userMultiplied: false
+  - label: Additional Location
+    name: essentials_location
+    type: flat
+    metric: location
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $95/month per additional location
+    userMultiplied: false
+  elements:
+  - name: Scheduling
+  - name: Point of Sale
+  - name: Payroll
+  - name: Marketing
+  - name: Memberships
+  - name: Unlimited SMS & Email Notifications
+- id: mangomint-standard
+  name: Standard
+  type: paid
+  description: >-
+    Most-popular mid tier for up to 20 service providers. Adds Express
+    Booking, Virtual Waiting Room, and standard integrations; the only tier
+    (with Unlimited) eligible for the webhooks add-on.
+  entries:
+  - label: Monthly Subscription
+    name: standard_monthly
+    type: flat
+    metric: subscription
+    limit: 20
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $245/month (up to 20 service providers)
+    userMultiplied: false
+  - label: Additional Location
+    name: standard_location
+    type: flat
+    metric: location
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $135/month per additional location
+    userMultiplied: false
+  - label: Webhooks Add-on
+    name: standard_webhooks
+    type: flat
+    metric: addon
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $50/month (outbound webhooks, support-configured)
+    userMultiplied: false
+  elements:
+  - name: Express Booking
+  - name: Virtual Waiting Room
+  - name: Memberships
+  - name: Standard Integrations Included
+  - name: Webhooks Add-on Eligible
+- id: mangomint-unlimited
+  name: Unlimited
+  type: paid
+  description: >-
+    Top tier with unlimited service providers, all Standard features, and
+    Shopify and other integrations included (Shopify billed separately at
+    $50/month). Webhooks add-on eligible.
+  entries:
+  - label: Monthly Subscription
+    name: unlimited_monthly
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $375/month (unlimited service providers)
+    userMultiplied: false
+  - label: Additional Location
+    name: unlimited_location
+    type: flat
+    metric: location
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $175/month per additional location
+    userMultiplied: false
+  - label: Webhooks Add-on
+    name: unlimited_webhooks
+    type: flat
+    metric: addon
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $50/month (outbound webhooks, support-configured)
+    userMultiplied: false
+  - label: Shopify Integration
+    name: unlimited_shopify
+    type: flat
+    metric: addon
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $50/month
+    userMultiplied: false
+  elements:
+  - name: Unlimited Service Providers
+  - name: Shopify Integration Included
+  - name: Advanced Features
+  - name: Webhooks Add-on Eligible
+- id: mangomint-addons
+  name: Cross-Tier Add-Ons
+  type: usage
+  description: >-
+    Add-ons available across all tiers, priced independently of the base
+    subscription. None of these are API access - they are software features
+    and services.
+  entries:
+  - label: Forms & Charting
+    name: addon_forms_charting
+    type: flat
+    metric: addon
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $50/month (+$25/month per additional location)
+    userMultiplied: false
+  - label: Connect (Call, Text, Chat)
+    name: addon_connect
+    type: flat
+    metric: addon
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $75/month (+$25/month per additional location)
+    userMultiplied: false
+  - label: Payroll Processing
+    name: addon_payroll
+    type: usage
+    metric: worker
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: $50/month + $8 per worker
+    userMultiplied: true
+  - label: Email/Text Marketing Credits
+    name: addon_marketing_credits
+    type: usage
+    metric: credit
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 1 cent per marketing credit (volume discounts available)
+    userMultiplied: false
+  elements:
+  - name: Forms & Charting
+  - name: Connect (Call/Text/Chat)
+  - name: Payroll Processing
+  - name: Marketing Campaigns
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

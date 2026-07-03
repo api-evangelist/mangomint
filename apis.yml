@@ -1,0 +1,50 @@
+aid: mangomint
+url: https://raw.githubusercontent.com/api-evangelist/mangomint/refs/heads/main/apis.yml
+name: Mangomint
+kind: company
+description: >-
+  Mangomint is salon and spa business management software covering scheduling,
+  point of sale, payroll, marketing, memberships, and forms. Mangomint has no
+  public, self-service developer portal, no published REST/GraphQL API
+  reference, and no OpenAPI specification. Its only documented programmatic
+  surface is outbound webhooks (appointment booked/updated/canceled, sale
+  completed, form submitted) that Mangomint staff configure by hand over chat
+  support once a customer supplies a receiving endpoint URL; payload schemas
+  and authentication are not published. A small set of one-off, vendor-built
+  integrations (Shopify, Mailchimp, Docovia, Doxy.me, WaiverForever, Gift Up!)
+  are toggled on from the Mangomint dashboard, and there is no listed Zapier
+  app. This entry is documented as a stub because there is no public API to
+  catalog.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Salon Software
+- Spa Software
+- Scheduling
+- Point of Sale
+- Business Management
+- Webhooks
+- No Public API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.mangomint.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/mangomint
+- type: Integrations
+  url: https://www.mangomint.com/integrations/
+- type: Documentation
+  url: https://www.mangomint.com/learn/help-articles/integrations/
+- type: WebhooksHelp
+  url: https://www.mangomint.com/learn/webhooks-integration/
+- type: HelpCenter
+  url: https://www.mangomint.com/learn/
+- type: GitHubOrganization
+  url: https://github.com/mangomint
+- type: Plans
+  url: plans/mangomint-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
