@@ -29,6 +29,8 @@ modified: '2026-07-03'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/mangomint-domain-security.yml
 - type: Website
   url: https://www.mangomint.com
 - type: LinkedIn
@@ -45,6 +47,8 @@ common:
   url: https://github.com/mangomint
 - type: Plans
   url: plans/mangomint-plans-pricing.yml
+- type: Blog
+  url: https://www.mangomint.com/blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
