@@ -15,6 +15,17 @@ description: >-
   are toggled on from the Mangomint dashboard, and there is no listed Zapier
   app. This entry is documented as a stub because there is no public API to
   catalog.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
