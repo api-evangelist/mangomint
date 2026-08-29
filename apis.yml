@@ -1,5 +1,8 @@
 aid: mangomint
 url: https://raw.githubusercontent.com/api-evangelist/mangomint/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "This entry is documented as a stub because there is no public API to catalog."
 name: Mangomint
 kind: company
 description: >-
