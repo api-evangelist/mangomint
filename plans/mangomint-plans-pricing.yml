@@ -222,3 +222,54 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - subscription
+  units:
+  - credit
+  - feature
+  - object
+  - period
+  plans:
+  - name: Essentials
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    - period
+    periods:
+    - month
+  - name: Standard
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - feature
+    - object
+    - period
+    periods:
+    - month
+  - name: Unlimited
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - feature
+    - object
+    - period
+    periods:
+    - month
+  - name: Cross-Tier Add-Ons
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - credit
+    - feature
+    - other
+    periods:
+    - month
