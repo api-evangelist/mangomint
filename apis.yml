@@ -35,6 +35,9 @@ accessModel:
   trial: false
   try_now: false
   public: false
+  gated: private
+  gated_source:
+  - tag:No Public API
   label: Paid
   confidence: medium
   source:
@@ -49,7 +52,6 @@ tags:
 - Point-of-Sale
 - Business Management
 - Webhook
-- No Public API
 tags_raw:
 - Salon Software
 - Spa Software
@@ -57,7 +59,6 @@ tags_raw:
 - Point of Sale
 - Business Management
 - Webhooks
-- No Public API
 created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.23'
@@ -86,3 +87,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- No Public API
