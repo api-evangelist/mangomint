@@ -1,4 +1,4 @@
-# Mangomint (mangomint)
+# Mangomint
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,51 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mangomint is salon and spa business management software covering scheduling, point of sale, payroll, marketing, memberships, and forms. **Mangomint has no public developer API.** There is no self-service developer portal, no published REST/GraphQL API reference, and no OpenAPI specification. The only documented programmatic surface is outbound webhooks - appointment booked/updated/canceled, sale completed, and form submitted - which Mangomint support configures by hand against a customer-supplied endpoint URL. Payload schemas and authentication are not published. A small set of one-off, vendor-built integrations (Shopify, Mailchimp, Docovia, Doxy.me, WaiverForever, Gift Up!) can be toggled on from the Mangomint dashboard, and no official Zapier app exists for Mangomint. This repository is documented as a stub because there is no public API to catalog.
+Mangomint is salon and spa business management software covering scheduling, point of sale, payroll, marketing, memberships, and forms. Mangomint has no public, self-service developer portal, no published REST/GraphQL API reference, and no OpenAPI specification. Its only documented programmatic surface is outbound webhooks (appointment booked/updated/canceled, sale completed, form submitted) that Mangomint staff configure by hand over chat support once a customer supplies a receiving endpoint URL; payload schemas and authentication are not published. A small set of one-off, vendor-built integrations (Shopify, Mailchimp, Docovia, Doxy.me, WaiverForever, Gift Up!) are toggled on from the Mangomint dashboard, and there is no listed Zapier app. This entry is documented as a stub because there is no public API to catalog.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/mangomint/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/mangomint/refs/heads/main/apis.yml)
+**Areas:** Salon Software · Spa Software · Scheduling · Point-of-Sale · Business Management · Webhook
 
-## Tags
+## Mangomint on APIs.io
 
-- Salon Software
-- Spa Software
-- Scheduling
-- Point of Sale
-- Business Management
-- Webhooks
-- No Public API
+Everything profiled for Mangomint is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mangomint/](https://apis.io/providers/mangomint/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-None. Mangomint does not publish a public API. See [review.yml](review.yml) for the full findings.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Webhooks (not a public API)
+- [Mangomint Domain Security](https://apis.io/security/mangomint/mangomint-domain-security/)
 
-Mangomint offers outbound webhooks as a paid add-on ($50/month, Standard & Unlimited plans only), covering:
+#### Plans and pricing (1)
 
-- Appointment booked, updated, or canceled
-- Sale completed
-- Form submitted
+Published plans, tiers and prices.
 
-Setup is support-mediated: a customer contacts Mangomint chat support with a receiving endpoint URL, and Mangomint staff wire it up. There is no self-service webhook management UI, no published payload schema, and no documented authentication/signature scheme.
+- [Mangomint Plans Pricing](https://apis.io/plans/mangomint/mangomint-plans-pricing/)
 
-## Common Properties
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.mangomint.com)
-- [LinkedIn](https://www.linkedin.com/company/mangomint)
-- [Integrations](https://www.mangomint.com/integrations/)
 - [Documentation](https://www.mangomint.com/learn/help-articles/integrations/)
-- [Webhooks Help](https://www.mangomint.com/learn/webhooks-integration/)
-- [Help Center](https://www.mangomint.com/learn/)
-- [GitHub Organization](https://github.com/mangomint)
-- [Plans](plans/mangomint-plans-pricing.yml)
+- [Blog](https://www.mangomint.com/blog)
+- [GitHub](https://github.com/mangomint)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 8.7** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mangomint/](https://apis.io/providers/mangomint/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mangomint: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mangomint/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
